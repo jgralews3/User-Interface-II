@@ -1,1 +1,99 @@
 /* Add CSS styling here */
+@keyframes fade {
+    from {background: palevioletred;}
+    to {background: white;}
+    from {color: white;}
+    to {color: palevioletred;}
+}
+header {
+    background-color: lightgray;
+}
+nav {
+display:flex;
+margin: 10px;
+}
+
+nav a {
+    background-color: palevioletred;
+    color: white;
+    padding: 12px;
+    border: 1px solid black;
+    margin: 10px 0px;
+    text-decoration: none;
+}
+a:hover{
+    background-color: white;
+    color: palevioletred;
+    animation-name: fade;
+    animation-duration: 1s;
+}
+.first {
+display: flex;
+justify-content: space-evenly;
+font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+max-width: 975px;
+}
+.inner {
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.inner a{
+    background-color: palevioletred;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border: 1px solid black;
+    margin: 10px 0px;
+}
+.inner a:hover{
+    background-color: white;
+    color: palevioletred;
+    animation-name: fade;
+    animation-duration: 1s;
+}
+#intro{
+    width: 400px;
+}
+.gallery {
+    max-width: 1000px;
+}
+.gallery img {
+    margin: 2%;
+    transition: .3s ease-in-out;
+}
+.gallery img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale (1.1);
+}
+.gallery {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+.gallery div {
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-style: italic;
+    text-decoration: underline;
+    max-width: 200px;
+    margin: 10px;
+}
+footer {
+    display:flex;
+    background-color: lightgray;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+footer a {
+    background: palevioletred;
+    color:white;
+    padding: 12px;
+    border: 1px solid black;
+    text-decoration: none;
+}
