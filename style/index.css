@@ -1,1 +1,195 @@
-/* Add CSS styling here */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+    border-spacing: 0;
+}
+html {
+    font-size: 62.5%;
+    background: rgb(223, 221, 221);
+}
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+@keyframes fade {
+    from {background: palevioletred;}
+    to {background: white;}
+    from {color: white;}
+    to {color: palevioletred;}
+}
+header {
+    background-color: rgb(196, 192, 192);
+}
+nav {
+display:flex;
+margin: 1rem;
+}
+
+nav a {
+    font-size: 1.6rem;
+    background-color: palevioletred;
+    color: white;
+    padding: 1.2rem;
+    border: .1rem solid black;
+    margin: 1rem 0rem;
+    text-decoration: none;
+}
+a:hover{
+    background-color: white;
+    color: palevioletred;
+    animation-name: fade;
+    animation-duration: 1s;
+}
+button:hover{
+    background-color: white;
+    color: palevioletred;
+    animation-name: fade;
+    animation-duration: 1s;
+}
+.first {
+    font-size: 1.6rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    max-width: 95rem;
+}
+#bigpic {
+    margin: 1rem 1rem 1rem 0rem;
+    border: .1rem solid black;
+}
+.inner {
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.inner button{
+    background-color: palevioletred;
+    color: white;
+    text-decoration: none;
+    padding: 1.2rem;
+    border: .1rem solid black;
+    margin: 1rem 0rem;
+}
+.inner button:hover{
+    background-color: white;
+    color: palevioletred;
+    animation-name: fade;
+    animation-duration: 1s;
+}
+#intro{
+    width: 40rem;
+}
+.gallery {
+    max-width: 100rem;
+}
+.gallery img {
+    border: .1rem solid black;
+    margin: 2%;
+    transition: .3s ease-in-out;
+}
+.gallery img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale (1.1);
+}
+.gallery {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+.gallery div {
+    font-size: 1.6rem;
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-style: italic;
+    text-decoration: underline;
+    max-width: 20rem;
+    margin: 1rem;
+}
+footer {
+    font-size: 1.8rem;
+    display:flex;
+    background-color: rgb(196, 192, 192);
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 1.5rem;
+}
+footer button {
+    background: palevioletred;
+    color:white;
+    padding: 1.2rem;
+    border: 0.1rem solid black;
+    text-decoration: none;
+}
+
+@media (max-width: 800px){
+    h1 {
+        display: flex;
+        justify-content: center;
+    }
+    .first {
+     flex-direction: column;
+        }
+    nav {
+        display: flex;
+        justify-content: center;
+     }
+     #bigpic {
+        display: flex;
+        flex-flow: column wrap;
+    max-width: 60vh;
+    align-self: center;
+     }
+}
+@media (max-width: 500px){
+    header {background: white;}
+    body{background: white;}
+    footer {background: white;}
+    #bigpic {max-width: 50vh}
+}
